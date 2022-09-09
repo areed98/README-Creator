@@ -18,7 +18,7 @@
 ---
   ## [Installation](#table-of-contents)
 
-  To install, clone this repository with git clone `git@github.com:areed98/README-Creator.git`
+  To install, clone this repository with git clone `git@github.com:areed98/README-Generator.git`
 
 ---
   ## [Usage](#table-of-contents)
