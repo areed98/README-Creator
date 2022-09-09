@@ -20,50 +20,65 @@ function renderLicenseLink(License) {
     [${License}](https://choosealicense.com/licenses/${License})
     `;
   }
-}
+};
 
 // If there is no license, return an empty string
 function renderLicenseSection(License) {
-  if (license == 'No License') {
-    return '';
-  }
-  else {
-    return `
-    ## [License](#table-of-contents)
-    
-    The application is covered under the following license(s):
-    
-    ${renderLicenseLink(License)}
-    `;
-  }
-}
-// Create table of contents if statement for license
-function LicenseContents(License) {
   if (License == 'No License') {
-    return '';
+    return 'This project is not licensed!';
   }
   else {
-    return `
-    * [License](#License)
-    `;
+    return "The application is covered under the following license:";
   }
-}
+};
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
-  # ${data.title}
+  # ${data.Title}
+
+  ${renderLicenseBadge(data.License)}
 
   ## Table-of-Contents
 
   * [Description](#Description)
   * [Installation](#Installation)
-  * [Usage](Usage)
-  * [Contribution](Contribution)
-  * [Tests](Tests)
-  * 
+  * [Usage](#Usage)
+  * [License](#License)
+  * [Contribution](#Contribution)
+  * [Tests](#Tests)
+  * [Questions](#Questions)
 
+  ## [Description](#table-of-contents)
+
+  ${data.Description}
+
+  ## [Usage](#table-of-contents)
+
+  ${data.Usage}
+
+  ## [License](#table-of-contents)
+
+  ${renderLicenseSection(data.License)}
+
+  ${renderLicenseLink(data.License)}
+
+  ## [Contribution](#table-of-contents)
+
+  ${data.Contribution}
+
+  ## [Tests](#table-of-contents)
+
+  ${data.Test}
+
+  ## [Questions](#table-of-contents)
+
+  Please use the following links for contact:
+
+  [GitHub](https://github.com/${data.username})
+
+  [Email: ${data.email}](mailto:${data.email})
 `;
-}
+};
 
 module.exports = generateMarkdown;

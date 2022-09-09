@@ -1,7 +1,6 @@
 // Include packages needed for this application
 const inquirer = require("Inquirer");
 const fs = require('fs');
-const MarkdownMaker = require('./utils/generateMarkdown.js');
 const generateMarkdown = require("./utils/generateMarkdown.js");
 
 // TODO: Create an array of questions for user input
@@ -10,7 +9,7 @@ const questions = [
             type: 'input',
             name: 'Title',
             message: 'What is the name of your project?',
-            validate: Titleinput => {
+            validate(Titleinput) {
                 if (Titleinput) {
                     return true;
                 } else {
@@ -35,7 +34,7 @@ const questions = [
         {
             type: 'list',
             name: 'License',
-            message: 'Please input what licenses you may have!',
+            message: 'Please input what license you may have!',
             choices: ['MIT', 'ISC', 'GPL-3.0', 'Apache-2.0', 'Unilicense', 'No License']
         },
         {
@@ -125,10 +124,11 @@ function writeToFile(data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {
-    inquirer
+const init = () => {
+    return inquirer
         .prompt(questions)
         .then(answers => {
+            console.log(answers);
             return answers;
         })
 };
@@ -139,6 +139,9 @@ init()
 .then(answers => {
     console.log(answers);
     return generateMarkdown(answers);
+})
+.then(page => {
+    return writeToFile(page);
 })
 .catch(err => {
     console.log(err);
