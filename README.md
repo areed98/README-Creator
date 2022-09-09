@@ -16,6 +16,11 @@
   * [Tests](#tests)
   * [Questions](#questions)
 ---
+  ## [Installation](#table-of-contents)
+
+  To install, clone this repository with git clone `git@github.com:areed98/README-Creator.git`
+
+---
   ## [Usage](#table-of-contents)
 
   To use the code, open a git bash in the folder that you have cloned this repository to, and type in "node index.js." <br/>

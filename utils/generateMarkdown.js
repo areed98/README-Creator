@@ -48,6 +48,11 @@ function generateMarkdown(data) {
   * [Tests](#tests)
   * [Questions](#questions)
 ---
+  ## [Installation](#table-of-contents)
+
+  ${data.Installation}
+
+---
   ## [Usage](#table-of-contents)
 
   ${data.Usage}
