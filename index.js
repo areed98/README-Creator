@@ -3,7 +3,7 @@ const inquirer = require("Inquirer");
 const fs = require('fs');
 const generateMarkdown = require("./utils/generateMarkdown.js");
 
-// TODO: Create an array of questions for user input
+// Question array created and validated
 const questions = [
         {
             type: 'input',
@@ -53,12 +53,12 @@ const questions = [
         {
             type: 'input',
             name: 'Usage',
-            message: 'What is the intended use for the project, and what are some examples?',
+            message: 'How do you use this application?',
             validate: Usageinput => {
                 if (Usageinput) {
                     return true;
                 } else {
-                    console.log('Please provide information on what this is used for!');
+                    console.log('Please provide information on how to use!');
                     return false;
                 }
             }
@@ -66,12 +66,12 @@ const questions = [
         {
             type: 'input',
             name: 'Contribution',
-            message: 'List the collaborators and other assets used to complete the project!',
+            message: 'Please provide information on contributing.',
             validate: Contributioninput => {
                 if (Contributioninput) {
                     return true;
                 } else {
-                    console.log('Please enter a list of contributers! (This includes you!)');
+                    console.log('Please enter contribution information.');
                     return false;
                 }
             }
@@ -117,13 +117,13 @@ const questions = [
         }
     ];
 
-// TODO: Create a function to write README file
+// Create a README file with a static name, and our data.
 function writeToFile(data) {
     fs.writeFile('Generated-README.md', data, err =>
     err ? console.log(err) : console.log('README Generated!'));
 }
 
-// TODO: Create a function to initialize app
+// Run inquirer so that it will prompt for questions, and then we can input answers that are returned
 const init = () => {
     return inquirer
         .prompt(questions)
@@ -136,13 +136,15 @@ const init = () => {
 
 // Function call to initialize app
 init()
+// Takes returned answers and inserts them into the generateMarkdown function
 .then(answers => {
-    console.log(answers);
     return generateMarkdown(answers);
 })
-.then(page => {
-    return writeToFile(page);
+// Runs the writeToFile function to create a file to store the generateMarkdown(answers) in
+.then(create => {
+    return writeToFile(create);
 })
+// Error catch
 .catch(err => {
     console.log(err);
 })

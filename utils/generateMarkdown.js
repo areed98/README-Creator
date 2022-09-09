@@ -1,28 +1,24 @@
-// If there is no license, return an empty string
+// Create the license badge; if no license, it returns empty
 function renderLicenseBadge(License) {
   if (License == 'No License') {
     return '';
   }
   else {
-    return `
-    ![Badge](https://img.shields.io/badge/license-${License}-blue)
-    `;
+    return `![Badge](https://img.shields.io/badge/license-${License}-blue)`;
   }
 };
 
-// If there is no license, return an empty string
+// Create the link for the license badge, if there is no license, return empty
 function renderLicenseLink(License) {
   if (License == 'No License') {
     return '';
   }
   else {
-    return `
-    [${License}](https://choosealicense.com/licenses/${License})
-    `;
+    return `[${License}](https://choosealicense.com/licenses/${License})`;
   }
 };
 
-// If there is no license, return an empty string
+// Create the section for the license within the markdown, if there is no license, then state it is not licensed
 function renderLicenseSection(License) {
   if (License == 'No License') {
     return 'This project is not licensed!';
@@ -32,45 +28,48 @@ function renderLicenseSection(License) {
   }
 };
 
-// TODO: Create a function to generate markdown for README
+// Generate the Markdown, which gets called from the index.js file
 function generateMarkdown(data) {
   return `
   # ${data.Title}
 
   ${renderLicenseBadge(data.License)}
-
-  ## Table-of-Contents
-
-  * [Description](#Description)
-  * [Installation](#Installation)
-  * [Usage](#Usage)
-  * [License](#License)
-  * [Contribution](#Contribution)
-  * [Tests](#Tests)
-  * [Questions](#Questions)
-
-  ## [Description](#table-of-contents)
+  ## Description
 
   ${data.Description}
+  
+---
+  ## Table of Contents
 
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contribution](#contribution)
+  * [Tests](#tests)
+  * [Questions](#questions)
+---
   ## [Usage](#table-of-contents)
 
   ${data.Usage}
 
+---
   ## [License](#table-of-contents)
 
   ${renderLicenseSection(data.License)}
 
   ${renderLicenseLink(data.License)}
 
+---
   ## [Contribution](#table-of-contents)
 
   ${data.Contribution}
 
+---
   ## [Tests](#table-of-contents)
 
   ${data.Test}
 
+---
   ## [Questions](#table-of-contents)
 
   Please use the following links for contact:

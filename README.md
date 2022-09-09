@@ -1,69 +1,56 @@
-# 09 Node.js: Professional README Generator
 
-When creating an open source project on GitHub, it’s important to have a high-quality README for the app. This should include what the app is for, how to use the app, how to install it, how to report issues, and how to make contributions&mdash;this last part increases the likelihood that other developers will contribute to the success of the project. 
+  # README Generator
 
-You can quickly and easily generate a README file by using a command-line application to generate one. This allows the project creator to devote more time working on the project.
+  ![Badge](https://img.shields.io/badge/license-MIT-blue)
+  ## Description
 
-Your task is to create a command-line application that dynamically generates a professional README.md file from a user's input using the [Inquirer package](https://www.npmjs.com/package/inquirer). Review the [Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide) as a reminder of everything that a high-quality, professional README should contain. 
+  This application provides command line driven input for a user to create a README.md file for their projects, instead of having to do the work manually.  
 
-The application will be invoked by using the following command:
+---
+  ## Table of Contents
 
-```
-node index.js
-```
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contribution](#contribution)
+  * [Tests](#tests)
+  * [Questions](#questions)
+---
+  ## [Usage](#table-of-contents)
 
-Because this application won’t be deployed, you’ll also need to provide a link to a walkthrough video that demonstrates its functionality. Revisit 2.2.4: Screencastify Tutorial in Module 2 of the **prework** as a refresher on how to record video from your computer. You’ll need to submit a link to the video **and** add it to the README of your project.
+  To use the code, open a git bash in the folder that you have cloned this repository to, and type in "node index.js." <br/>
+  Once you have typed this in, you will be prompted with a series of questions that you will answer <br/>
+  Once these have all been answered, a new file named "Generated-README.md" will appear in your directory <br>
+  If you have to edit anything, you may do so using markdown.  Here is a guide for any questions you may have: [Guide](https://www.markdownguide.org/)
 
-Before you start, clone the [starter code](https://github.com/coding-boot-camp/potential-enigma).
+---
+  ## [License](#table-of-contents)
 
-## User Story
+  The application is covered under the following license:
 
-```
-AS A developer
-I WANT a README generator
-SO THAT I can quickly create a professional README for a new project
-```
+  [MIT](https://choosealicense.com/licenses/MIT)
 
-## Acceptance Criteria
+---
+  ## [Contribution](#table-of-contents)
 
-```
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for information about my application repository
-THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-WHEN I enter my project title
-THEN this is displayed as the title of the README
-WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-WHEN I enter my GitHub username
-THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-WHEN I enter my email address
-THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-WHEN I click on the links in the Table of Contents
-THEN I am taken to the corresponding section of the README
-```
+  To contribute to this repo, first create a pull request.
+  To do so, follow these instructions:
+  * Fork the Repo
+  * Create a feature branch with 'git checkout -b BRANCH-NAME'
+  * Commit any new feature/fix
+  * Push your branch and create a pull request
+  Note: For a merge to work, there will be a review on changes first.
 
-## Getting Started
+---
+  ## [Tests](#table-of-contents)
 
-Here are some guidelines to help you get started:
+  To test the application, clone this repo into a folder, and with Visual Studio Code, run "node index.js" in the terminal.  This will give you a view of how the code runs, and you may test out your own questions and change the layout of the markdown itself!
 
-* Create a `.gitignore` file and include `node_modules/` and `.DS_Store/` so that your `node_modules` directory isn't tracked or uploaded to GitHub. Be sure to create your `.gitignore` file before installing any npm dependencies.
+---
+  ## [Questions](#table-of-contents)
 
-* Make sure that your repo includes a `package.json` with the required dependencies. You can create one by running `npm init` when you first set up the project, before installing any dependencies.
+  Please use the following links for contact:
 
-* Include a video of the typical user flow through your application. This includes views of the prompts and the responses after their selection.
+  [GitHub](https://github.com/areed98)
 
-* Refer to the [Fullstack Blog Video Submission Guide](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide) for additional guidance on creating a video.
-
-* Include any other screenshots you deem necessary to help someone who has never been introduced to your application understand the purpose and function of it. This is how you will communicate to potential employers or other developers in the future what you built and why, and to show how it works.
-
-## Review
-
-You are required to submit the following for review:
-
-* A walkthrough video demonstrating the functionality of the application.
-
-* A sample README.md file for a project repository generated using your application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+  [Email: austinjreed89@gmail.com](mailto:austinjreed89@gmail.com)
