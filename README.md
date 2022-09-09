@@ -27,6 +27,8 @@
   Once you have typed this in, you will be prompted with a series of questions that you will answer <br/>
   Once these have all been answered, a new file named "Generated-README.md" will appear in your directory <br>
   If you have to edit anything, you may do so using markdown.  Here is a guide for any questions you may have: [Guide](https://www.markdownguide.org/)
+  
+  Here is a link to the usage of the application: [Example](https://drive.google.com/file/d/1kOwn0D9FOLBmemfbgkZlQpdgROVH1A-p/view?usp=sharing)
 
 ---
   ## [License](#table-of-contents)
