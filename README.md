@@ -29,6 +29,9 @@
   If you have to edit anything, you may do so using markdown.  Here is a guide for any questions you may have: [Guide](https://www.markdownguide.org/)
   
   Here is a link to the usage of the application: [Example](https://drive.google.com/file/d/1kOwn0D9FOLBmemfbgkZlQpdgROVH1A-p/view?usp=sharing)
+  
+  Usage should look like the following:
+  ![Example command line](./images/readme-generator3.png)
 
 ---
   ## [License](#table-of-contents)
